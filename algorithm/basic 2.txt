@@ -1,0 +1,44 @@
+def countdown(num):
+  for i in range(num,-1,-1):
+    print(i)
+
+countdown(5)
+//Countdown 
+===========================
+
+def print_and_return(a):
+  for i in range(len(a)):
+    print(a[i])
+    return a[i+1]
+
+print_and_return([1,2])
+//Print and Return
+==========================
+
+def first_plus_length(a):
+  sum = a[0] + len(a)
+  return sum
+==========================
+
+def values_greater_than_second(a):
+  if len(a)<2:
+    return False
+  else:
+    newlist=[]
+    for i in range(len(a)):
+      if a[i]>a[1]:
+        newlist.append(a[i])
+  
+  print(len(newlist))
+  return newlist
+
+print(values_greater_than_second([5,2,3,2,1,4]))
+====================
+
+def length_and_value(a,b):
+  newlist=[]
+  for i in range(a):
+    newlist.append(b)
+  return newlist
+
+print(length_and_value(4,7))

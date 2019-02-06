@@ -1,0 +1,77 @@
+def positive(a):
+  for i in range(len(a)):
+    if a[i]>0:
+      a[i]='big'
+  return a;
+=======================
+def countpositive(a):
+  count=0
+  for i in range(len(a)):
+    if a[i]>0:
+      count+=1
+  a[len(a)-1]=count
+  return a
+========================
+def sum_total(a):
+  sum =0
+  for i in range(len(a)):
+    sum=sum+a[i]
+  return sum  
+=========================
+def average(a):
+  sum =0
+  avg=0
+  for i in range(len(a)):
+    sum=sum+a[i]
+  avg=sum/len(a)
+  return avg
+============================
+def length(a):
+  return len(a)
+=============================
+def minimum(a):
+  
+  if(len(a)!=0):
+    minnum=a[0]
+    for i in range(len(a)):
+      if a[i]<minnum:
+        minnum = a[i]
+    return minnum  
+  else: 
+    return False
+==============================
+def maximum(a):
+  
+  if(len(a)!=0):
+    maxnum=a[0]
+    for i in range(len(a)):
+      if a[i]>maxnum:
+        maxnum = a[i]
+    return maxnum  
+  else: 
+    return False  
+==============================
+def ultimate_analysis(a):
+  maxn=a[0]
+  minu=a[0]
+  sumTotal=0
+  avg=0
+  newa = {}
+  for i in range(len(a)):
+    if minu > a[i]:
+      minu=a[i]
+    if maxn < a[i]:
+      maxn = a[i]
+    sumTotal += a[i]
+
+  avg = sumTotal/len(a)
+  newa = {'sumTotal': sumTotal, 'average': avg, 'minimum': minu, 'maximum': maxn, 'length': len(a)} 
+  return newa
+===================================
+def reverse_list(a):
+  mid = int(len(a)/2)
+  for i in range(mid):
+    temp=a[i]
+    a[i]=a[len(a)-1-i]
+    a[len(a)-1-i]=temp
+  return a
