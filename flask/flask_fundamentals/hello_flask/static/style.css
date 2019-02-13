@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    background-color: blueviolet;
+}
+/* .color1{
+    background-color: {{color1}};
+    }
+
+    .color2{
+    background-color: {{color2}};
+    }
+     */
+div{
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    display: inline-block;
+    margin: 0px;
+}

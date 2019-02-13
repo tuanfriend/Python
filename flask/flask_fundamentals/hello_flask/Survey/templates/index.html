@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        #wrapper {
+            margin: 0px auto;
+            width: 800px;
+            border: 1px solid pink;
+            margin-top: 50px;
+        }
+        .inline{
+            display: inline-block;
+            vertical-align: top;
+        }
+        input{
+            margin-left: 200px;
+            width: 450px;
+        }
+        button{
+            margin-left: 715px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1 style="text-align: center;">Coding Dojo Survey</h1>
+        <form action='/process' method='POST'>
+            <div class="inline">Your Name:<input class="form-control inline" name="name" type="text"></div>
+
+
+            <div class="inline">Dojo Location:<input class="form-control inline" list="city" name="location">
+                <datalist id="city">
+                  <option value="Chicago">
+                  <option value="Seattle">
+                  <option value="Toronto">
+                </datalist>
+                
+            </div>
+
+
+            <div class="inline">Favourite Language:<input class="form-control inline" list="lang" name="lang">
+                <datalist id="lang">
+                  <option value="Python">
+                  <option value="HTML">
+                  <option value="CSS">
+                </datalist>
+            
+            </div>
+            <p>Comment (Option):</p>
+            <textarea name="comment" rows="8" cols="110"></textarea>
+            <button type="submit">Submmit</button>
+        </form>
+    </div>
+</body>
+
+</html>

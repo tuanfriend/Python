@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Guess Number</title>
+    <style>
+    body{
+        text-align: center;
+    }
+    .red{
+        background-color: rgb(252, 42, 42);
+    }
+    .green{
+        background-color: rgb(3, 197, 29);
+    }
+    div{
+        margin: 0px auto;
+        width: 155px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-bottom: 20px;
+        color: rgb(209, 209, 183);
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the great number game!</h1>
+    <p>I'm think of number between 1 and 100</p>
+    <p>Take a guess!</p>
+    <!-- <div class="red">
+        <Strong>Too Low!</Strong>
+    </div>
+    <div class="red">
+        <Strong>Too High!</Strong>
+    </div>
+    <div class="green">
+        <Strong>Bingo</Strong>
+    </div> -->
+    {{game | safe}}
+
+    <form action='/' method='POST'>
+        <input type='text' name='guessnumber'><br>
+        <input type='submit' value='Submit'>
+    </form>
+</body>
+
+</html>

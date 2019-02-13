@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold</title>
+    <style>
+        body {
+            padding-top: 50px;
+            margin: 0px auto;
+            width: 1000px;
+            outline: 1px solid gold;
+        }
+
+        p {
+            display: inline;
+        }
+
+        div {
+            margin-top: 20px;
+            text-align: center;
+            border: 1px solid blueviolet;
+            display: inline-block;
+            width: 210px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Your Gold:</p>
+    <p>{{money}}</p>
+    <br>
+    <div>
+        <h2>Farm</h2>
+        <p>(Earns 10 - 20 golds)</p>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="farm" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+
+    <div>
+        <h2>Cave</h2>
+        <p>(Earns 5 - 10 golds)</p>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="cave" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+
+    <div>
+        <h2>House</h2>
+        <p>(Earns 2 - 5 golds)</p>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="house" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+
+    <div>
+        <h2>Casino</h2>
+        <p>(Earns/takes 0 - 50 golds)</p>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="casino" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+    <br><br>
+    <p>Activities:</p><br>
+    <textarea rows="9" cols="138">{{ activites }}</textarea>
+</body>
+
+</html>
