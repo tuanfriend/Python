@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    <ul>
+        {% for each_user in all_user %}
+            <li>{{ each_user.first_name }} {{ each_user.last_name }}</li>
+        {% endfor %}
+        </ul>
+</body>
+</html>

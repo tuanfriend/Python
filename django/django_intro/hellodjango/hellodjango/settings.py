@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'apps.hidjango',
+    'apps.pokemon',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

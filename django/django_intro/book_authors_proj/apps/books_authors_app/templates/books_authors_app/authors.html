@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book and Authors Manage</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div {
+            vertical-align: top;
+            display: inline-block;
+            width: 400px;
+        }
+
+        table {
+            margin-top: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Add a Authors</h1>
+        <center><a href="http://127.0.0.1:8000/">Add Some Book?</a></center><br>
+        <form action="/process_auth" method="post">
+            {% csrf_token %}
+            First Name:<br>
+            <input type="text" name="fname">
+            <br><br>
+            Last Name:<br>
+            <input type="text" name="lname">
+            <br><br>
+            Notes:<br>
+            <textarea name="notes"></textarea>
+            <br><br>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    
+    <div>
+        <table border="1px solie black;">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+            {% for each_au in all_auths %}
+            <tr>
+                <td>{{each_au.id}}</td>
+                <td>{{each_au.first_name}} {{each_au.last_name}}</td>
+                <td><a href="authors/{{each_au.id}}">View</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
